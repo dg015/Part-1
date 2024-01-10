@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  direction: 1
+  direction: -1
 --- !u!4 &9631866
 Transform:
   m_ObjectHideFlags: 0
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 360
-  direction: 1
+  direction: -1
 --- !u!1 &858116137
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 36000
-  direction: 1
+  direction: -1
 --- !u!4 &1372930626
 Transform:
   m_ObjectHideFlags: 0
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  direction: -1
+  direction: 1
 --- !u!4 &1513198318
 Transform:
   m_ObjectHideFlags: 0
