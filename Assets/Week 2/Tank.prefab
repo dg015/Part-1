@@ -209,7 +209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7148457337608245097}
-  - component: {fileID: 843778432184025768}
+  - component: {fileID: 3699077138133461398}
   m_Layer: 0
   m_Name: Turret Rotation Point
   m_TagString: Untagged
@@ -233,7 +233,7 @@ Transform:
   - {fileID: 8786391649774385008}
   m_Father: {fileID: 1275591667074726104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &843778432184025768
+--- !u!114 &3699077138133461398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,10 +242,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6952709327999248852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b764e941c225e24abd9d1c62af17ed8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7357f71740c012c449f5ce3bbb32a7f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 50
 --- !u!1 &7178186103610857693
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1275591667074726104}
-  - component: {fileID: 8157128836028848062}
+  - component: {fileID: 3510346999202227524}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -281,7 +281,7 @@ Transform:
   - {fileID: 7148457337608245097}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8157128836028848062
+--- !u!114 &3510346999202227524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,12 +290,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7178186103610857693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 091ebf96c069d9744aefef2ec44225fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 28d02ad9a01316c41b88fe6531d0309c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missilePrefab: {fileID: 2148573833178086960, guid: 436e81d97d8ba284dbc49c04ffecff53, type: 3}
   speed: 3
-  missilePrefab: {fileID: 1895710558654623866, guid: 0dc1d09469714a9459243a333cb86656, type: 3}
-  spawn: {fileID: 7507911620481965329}
+  barrel: {fileID: 7507911620481965329}
 --- !u!1 &9178859151146983305
 GameObject:
   m_ObjectHideFlags: 0
