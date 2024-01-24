@@ -29,7 +29,7 @@ public class Car : MonoBehaviour
       rigidbody.AddTorque(-sterring * steeringSpeed * Time.deltaTime);  
       Vector2 force = transform.up * acceleration * fowardSpeed * Time.deltaTime;
         rigidbody.AddForce(force);
-        if (rigidbody.velocity.magnitude < maxSpeed)
+        if (rigidbody.velocity.magnitude > maxSpeed)
         {
             rigidbody.AddForce(force);
 
