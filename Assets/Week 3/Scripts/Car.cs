@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Car : MonoBehaviour
@@ -9,7 +10,7 @@ public class Car : MonoBehaviour
     [SerializeField] float fowardSpeed = 500f;
     [SerializeField] float steeringSpeed = 100f;
     [SerializeField] float maxSpeed = 50f;
-    Rigidbody2D rigidbody;
+    [SerializeField] Rigidbody2D rigidbody;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +22,23 @@ public class Car : MonoBehaviour
     {
         acceleration = Input.GetAxis("Vertical");
         sterring = Input.GetAxis("Horizontal");
-
-
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        Application.Quit();
+        
+    }
+
+
+    private void quit()
+    {
+        Debug.Log("you died");
+        
+        
+    }
+
     private void FixedUpdate()
     {
       rigidbody.AddTorque(-sterring * steeringSpeed * Time.deltaTime);  
