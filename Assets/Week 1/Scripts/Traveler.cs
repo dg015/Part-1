@@ -22,4 +22,6 @@ public class Traveler : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+
 }
