@@ -6,6 +6,7 @@ public class BulletMover : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private float speed = 1f;
+    //[SerializeField] HealthAssignment1 healthPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,11 @@ public class BulletMover : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.TryGetComponent(out HealthAssignment1 healthPlayer))
+        {
+            healthPlayer.health = healthPlayer.health - 1;
+            Debug.Log("hit");
+        }
         Destroy(this.gameObject);
     }
 }

@@ -28,10 +28,6 @@ public class Enemy : MonoBehaviour
         if (detection.GetComponent<DetectionArea>().detected == true)
         {
             timer();
-            if (ready)
-            {
-                AttackMode();
-            }
         }
 
 
@@ -47,16 +43,16 @@ public class Enemy : MonoBehaviour
         else if (time < 0)
         {
             time = 1f;
-            ready = true;
+            AttackMode();
         }
 
     }
 
     private void AttackMode()
     {
-        ready = false;
+        
 
-        Debug.Log("found enemy");
+        
         //barrel.LookAt(target.position);
 
 
@@ -71,6 +67,8 @@ public class Enemy : MonoBehaviour
 
         //transform.Rotate(dir);
         //transform.rotation = Quaternion.LookRotation(dir);
+
+   
 
 
     }
