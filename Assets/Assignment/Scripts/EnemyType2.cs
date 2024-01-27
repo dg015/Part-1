@@ -5,19 +5,8 @@ using UnityEngine.UIElements;
 
 public class EnemyType2 : MonoBehaviour
 {
-    [SerializeField] private Transform barrel;
-    [SerializeField] private Transform target;
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private float time;
-    [SerializeField] private bool ready;
-    [SerializeField] private GameObject detection;
-    [SerializeField] private float rot;
-    [SerializeField] private float speed = 5f;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
+    [SerializeField] private float speed = 5f;
 
     // Update is called once per frame
     void Update()
@@ -26,16 +15,13 @@ public class EnemyType2 : MonoBehaviour
     }
 
 
-    
-
-
     private void spin()
     {
-
+        //assing variable time * the speed
         float time =+ Time.deltaTime * speed;
-       
+       //use the variable as the gameObject's rotation file
         transform.Rotate(new Vector3(0, 0, time));
-            //rotation = Quaternion.Euler(0, 0, rot + time);
+           
 
 
     }

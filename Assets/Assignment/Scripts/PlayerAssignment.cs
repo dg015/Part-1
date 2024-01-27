@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAssignment : MonoBehaviour
 {
@@ -9,12 +10,19 @@ public class PlayerAssignment : MonoBehaviour
     [SerializeField] private float jumpForce = 50f;
     [SerializeField] private int isGrounded;
     [SerializeField] private int dir;
-    // Start is called before the first frame update
-    void Start()
+    public float health = 3;
+
+
+
+    private void death()
     {
-
+        //checks if player health is 0 or bellow it
+        if (health <= 0)
+        {
+            //if so reload the scene for the player to try again
+            SceneManager.LoadScene("Assigment");
+        }
     }
-
 
 
     // Update is called once per frame
@@ -24,6 +32,7 @@ public class PlayerAssignment : MonoBehaviour
         jump();
         checkKey();
         teleport();
+        death();
     }
 
     private void move()
@@ -43,6 +52,7 @@ public class PlayerAssignment : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
+        // if player stop coliding with a objct deduct the number
         isGrounded--;
     }
 

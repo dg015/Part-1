@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //find plaeyrs transform location and assignt it to tranform variable
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -25,8 +26,10 @@ public class Enemy : MonoBehaviour
 
     private void searchMode()
     {
+        // if player is inside the detection range the other script will return a true value
         if (detection.GetComponent<DetectionArea>().detected == true)
         {
+            //check if value is true and if true start timer
             timer();
         }
 
@@ -36,12 +39,16 @@ public class Enemy : MonoBehaviour
 
     private void timer()
     {
+        //while time is more than 0
         if (time > 0)
         {
+            //deduct one from time variable every second 
             time -= Time.deltaTime;
         }
-        else if (time < 0)
+        //if timer reaches 0
+        else if (time <= 0)
         {
+            // reset timer
             time = 1f;
             AttackMode();
         }
@@ -50,12 +57,6 @@ public class Enemy : MonoBehaviour
 
     private void AttackMode()
     {
-        
-
-        
-        //barrel.LookAt(target.position);
-
-
         Vector2 dir = target.position - transform.position;
         float ang = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         // Get the angle in radiants of the direction the enemy to the player 
@@ -63,13 +64,6 @@ public class Enemy : MonoBehaviour
         ang = ang - 90;
         transform.rotation = Quaternion.Euler(0, 0, ang);
         Instantiate(bullet, barrel.position, barrel.rotation);
-
-
-        //transform.Rotate(dir);
-        //transform.rotation = Quaternion.LookRotation(dir);
-
-   
-
 
     }
 }

@@ -5,26 +5,18 @@ using UnityEngine;
 public class DetectionArea : MonoBehaviour
 {
     public bool detected = false;
-    // Start is called before the first frame update
-    void Start()
-    {
+  
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
+    //if player enters detection area ( coliders with it)
     private void OnTriggerStay2D(Collider2D collision)
     {
         detected = true;
+        //set public boolean variable true
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        //if not set it false 
         detected = false;
     }
 }

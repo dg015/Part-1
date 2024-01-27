@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class DeathLaser : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // check if player oolides with it 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out HealthAssignment1 healthPlayer))
+        // if so get player component and health variable
+        if (collision.gameObject.TryGetComponent(out PlayerAssignment healthPlayer))
         {
+            //set player healht to 0
             healthPlayer.health = 0;
             Debug.Log("hit");
         }

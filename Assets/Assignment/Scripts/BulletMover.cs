@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class BulletMover : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private float speed = 1f;
-    //[SerializeField] HealthAssignment1 healthPlayer;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
+  
 
     // Update is called once per frame
     void Update()
     {
-
+        //make transform travel fowards at all times based on speed
         transform.Translate(0, 1 * speed * Time.deltaTime, 0);
     }
+
+    //check if object colided with another object
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out HealthAssignment1 healthPlayer))
+        // if so check if the objct has the player script
+        if (collision.gameObject.TryGetComponent(out PlayerAssignment healthPlayer))
         {
+            //if so remove 1 health point from player 
             healthPlayer.health = healthPlayer.health - 1;
             Debug.Log("hit");
         }
+        //if colided destroy itself
         Destroy(this.gameObject);
     }
 }
