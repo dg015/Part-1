@@ -15844,6 +15844,7 @@ GameObject:
   - component: {fileID: 531323622}
   - component: {fileID: 531323624}
   - component: {fileID: 531323623}
+  - component: {fileID: 531323625}
   m_Layer: 0
   m_Name: Central Reservation
   m_TagString: Untagged
@@ -16461,6 +16462,56 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!60 &531323625
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531323621}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.17924498, y: 2.0490665}
+      - {x: -5.8160024, y: 1.898552}
+      - {x: -5.9211473, y: -1.7400689}
+      - {x: 4.702283, y: -1.9193125}
+      - {x: 3.7367597, y: 1.7193079}
+  m_UseDelaunayMesh: 0
 --- !u!1 &554810462
 GameObject:
   m_ObjectHideFlags: 0
@@ -16506,7 +16557,7 @@ GameObject:
   - component: {fileID: 578033275}
   - component: {fileID: 578033274}
   - component: {fileID: 578033273}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24299,7 +24350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099639087}
   - component: {fileID: 1099639086}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: colider for camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24620,7 +24671,7 @@ GameObject:
   - component: {fileID: 1321729016}
   - component: {fileID: 1321729015}
   - component: {fileID: 1321729017}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
